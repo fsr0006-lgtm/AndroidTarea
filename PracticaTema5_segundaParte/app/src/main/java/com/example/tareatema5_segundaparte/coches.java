@@ -10,4 +10,12 @@ public class coches {
         this.image = image;
 
     }
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getImage() {
+        return image;
+    }
 }
+
