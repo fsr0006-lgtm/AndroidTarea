@@ -2,10 +2,13 @@ package com.example.tareatema5_segundaparte;
 
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class adapter extends RecyclerView.Adapter<adapter.coches>{
@@ -14,9 +17,27 @@ public class adapter extends RecyclerView.Adapter<adapter.coches>{
     public adapter(coches[] listaCoches){
         this.listaCoches = listaCoches;
     }
+    @NonNull
+    @Override
+    public cochesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.marcas_item, parent, false);
+        return new cochesViewHolder(view, parent.getContext());
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull cochesViewHolder holder, int position) {
+        holder.BindCoches(this.listaCoches[position]);
+    }
+
+    @Override
+    public int getItemCount() {
+        return this.listaCoches.lenght;
+    }
 
 
-public static class cochesViewHolder extends RecyclerView.ViewHolder{
+
+    public static class cochesViewHolder extends RecyclerView.ViewHolder{
+
 
     public TextView marcaView;
     public ImageView portadaView;
