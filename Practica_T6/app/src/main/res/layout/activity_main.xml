@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent" android:background="#262525" android:backgroundTint="#FFFEFE" tools:context=".MainActivity">
+<TextView android:id="@+id/textView7" android:layout_width="409dp" android:layout_height="55dp" android:layout_marginStart="1dp" android:layout_marginTop="23dp" android:text="Contraseña" android:textAlignment="center" android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textSize="20sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/etCorreo"/>
+<TextView android:id="@+id/textView5" android:layout_width="409dp" android:layout_height="55dp" android:layout_marginTop="229dp" android:text="Correo" android:textAlignment="center" android:textAppearance="@style/TextAppearance.AppCompat.Large" android:textSize="20sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+<Switch android:id="@+id/switch1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="147dp" android:layout_marginTop="18dp" android:text="¿Recordar?" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/etContraseña"/>
+<Button android:id="@+id/button" android:layout_width="152dp" android:layout_height="48dp" android:layout_marginStart="129dp" android:layout_marginTop="36dp" android:backgroundTint="#8C8C8C" android:text="Continuar" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/switch1"/>
+<EditText android:id="@+id/etCorreo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="102dp" android:layout_marginTop="1dp" android:ems="10" android:inputType="textEmailAddress" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView5"/>
+<EditText android:id="@+id/etContraseña" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="99dp" android:layout_marginTop="1dp" android:ems="10" android:inputType="textPassword" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView7"/>
+<TextView android:id="@+id/tvMensaje" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="102dp" android:layout_marginTop="34dp" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/button"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
