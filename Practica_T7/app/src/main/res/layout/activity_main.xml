@@ -9,11 +9,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="236dp"
-        android:layout_height="69dp"
+        android:layout_width="376dp"
+        android:layout_height="106dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:text="Media Player"
+        android:text="Reproductor de musica y sonido"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
@@ -24,24 +24,61 @@
         android:id="@+id/btnPlay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="39dp"
+        android:backgroundTint="#717070"
         android:text="Play"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="614dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <Button
         android:id="@+id/btnPause"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="106dp"
-        tools:layout_editor_absoluteY="614dp" />
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="39dp"
+        android:backgroundTint="#6A6A6A"
+        android:text="Pause"
+        app:layout_constraintStart_toEndOf="@+id/btnPlay"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnStop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="614dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="39dp"
+        android:backgroundTint="#713C3C3C"
+        android:text="Stop"
+        app:layout_constraintStart_toEndOf="@+id/btnPause"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="331dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="457dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tiempoLleva"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/tiempoQueda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="213dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tiempoLleva"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
