@@ -1,6 +1,7 @@
 package com.example.practica_t7;
 
 import android.media.MediaPlayer;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
 import android.widget.Button;
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             Button btnPlay = findViewById(R.id.btnPlay);
             Button btnPause = findViewById(R.id.btnPause);
             Button btnStop = findViewById(R.id.btnStop);
+
 
             btnPlay.setOnClickListener(v -> {
                 mediaPlayer.start();
@@ -93,6 +95,29 @@ public class MainActivity extends AppCompatActivity {
             public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {}
+        });
+
+        SoundPool soundPool = new SoundPool.Builder().setMaxStreams(10).build();
+        int sonido1 = soundPool.load(this,R.raw.sonido1,1);
+        int sonido2 = soundPool.load(this,R.raw.sonido2,1);
+        int sonido3 = soundPool.load(this,R.raw.sonido3,1);
+        int sonido4 = soundPool.load(this,R.raw.sonido4,1);
+
+        Button btnSonido1 = findViewById(R.id.btnSonido1);
+        btnSonido1.setOnClickListener(v -> {
+            soundPool.play(sonido1,1,1,1,0,1);
+        });
+        Button btnSonido2 = findViewById(R.id.btnSonido2);
+        btnSonido2.setOnClickListener(v -> {
+            soundPool.play(sonido2,1,1,1,0,1);
+        });
+        Button btnSonido3 = findViewById(R.id.btnSonido3);
+        btnSonido3.setOnClickListener(v -> {
+            soundPool.play(sonido3,1,1,1,0,1);
+        });
+        Button btnSonido4 = findViewById(R.id.btnSonido4);
+        btnSonido4.setOnClickListener(v -> {
+            soundPool.play(sonido4,1,1,1,0,1);
         });
 
     }

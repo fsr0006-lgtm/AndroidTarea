@@ -81,4 +81,48 @@
         app:layout_constraintStart_toEndOf="@+id/tiempoLleva"
         app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
+    <Button
+        android:id="@+id/btnSonido1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="77dp"
+        android:backgroundTint="#5F5E5E"
+        android:text="Sonido1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/btnSonido4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="#6B6B6B"
+        android:text="Sonido4"
+        app:layout_constraintStart_toEndOf="@+id/btnSonido3"
+        app:layout_constraintTop_toBottomOf="@+id/btnSonido2" />
+
+    <Button
+        android:id="@+id/btnSonido3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="#686868"
+        android:text="Sonido3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSonido1" />
+
+    <Button
+        android:id="@+id/btnSonido2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="77dp"
+        android:backgroundTint="#686666"
+        android:text="Sonido2"
+        app:layout_constraintStart_toEndOf="@+id/btnSonido1"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
