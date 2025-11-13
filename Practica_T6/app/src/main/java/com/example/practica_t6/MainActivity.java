@@ -1,5 +1,6 @@
 package com.example.practica_t6;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
         sRecordar = findViewById(R.id.switch1);
         tvMensaje = findViewById(R.id.tvMensaje);
 
+
         bContinuar.setOnClickListener(v -> {
+
+
 
             String correo = tCorreo.getText().toString();
             String contraseña = tContraseña.getText().toString();
@@ -44,6 +48,10 @@ public class MainActivity extends AppCompatActivity {
             Boolean recordar = sRecordar.isChecked();
 
             if(correo.equals("correo@correo.com") &&  contraseña.equals("123")){
+
+                Intent intent = new Intent(this, SegundaPantallaLogin.class);
+                intent.putExtra("correo", "correo@correo.com");
+                startActivity(intent);
 
                 tvMensaje.setText("Usuarios y contraseña correctos");
                 tCorreo.setText("");
