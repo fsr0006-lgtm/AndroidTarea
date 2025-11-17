@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 int segundos = mediaPlayer.getCurrentPosition() / 1000 % 60;
                 String tiempo = String.format("%02d:%02d", minutos, segundos);
                 tiempoLleva.setText(tiempo);
+
                 //Tiempo textView timepoQueda
                 int tiempoRestante = mediaPlayer.getDuration() - mediaPlayer.getCurrentPosition();
                 int minutosRestantes = tiempoRestante / 1000 / 60;
@@ -119,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         btnSonido4.setOnClickListener(v -> {
             soundPool.play(sonido4,1,1,1,0,1);
         });
+        
 
     }
 }
