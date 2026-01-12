@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <!-- LÍNEA SUPERIOR DE ESTILO -->
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:background="#33FF00"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="40dp"/>
+
+    <!-- TÍTULO FUTURISTA -->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GEO•FRIENDS"
+        android:textColor="#33FF00"
+        android:textSize="38sp"
+        android:letterSpacing="0.1"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        app:layout_constraintTop_toBottomOf="@id/topLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"/>
+
+    <!-- SUBTÍTULO MODERNO -->
+    <TextView
+        android:id="@+id/subTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Localización en Tiempo Real"
+        android:textColor="#9AFF9A"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"/>
+
+    <!-- MARCO CYBER -->
+    <View
+        android:id="@+id/cyberFrame"
+        android:layout_width="270dp"
+        android:layout_height="350dp"
+        android:background="@drawable/cyber_frame"
+        app:layout_constraintTop_toBottomOf="@id/subTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"/>
+
+    <!-- BOTÓN NEÓN -->
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:background="@drawable/btn_neon"
+        android:backgroundTint="#8BC34A"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="INICIAR"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:iconTint="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="@id/cyberFrame"
+        app:layout_constraintEnd_toEndOf="@id/cyberFrame"
+        app:layout_constraintStart_toStartOf="@id/cyberFrame"
+        app:layout_constraintTop_toTopOf="@id/cyberFrame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
