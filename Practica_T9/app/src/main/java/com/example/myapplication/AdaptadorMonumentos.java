@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 public class AdaptadorMonumentos extends RecyclerView.Adapter<AdaptadorMonumentos.HolderMonumentos>{
@@ -63,7 +65,7 @@ public class AdaptadorMonumentos extends RecyclerView.Adapter<AdaptadorMonumento
         holder.tvUbicacion.setText(ubicacion);
         holder.tvDescripcion.setText(descripcion);
 
-        //Glide.with(holder.itemView.getContext()).load(imagen).into(holder.imagenMonumento);
+        Glide.with(holder.itemView.getContext()).load(imagen).into(holder.imagenMonumento);
 
         if (position % 2 == 0) {
             holder.itemView.setBackgroundColor(context.getResources().getColor(R.color.color1));

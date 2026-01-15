@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         rvMonumentos = findViewById(R.id.rvMonumentos);
         RequestQueue queue = Volley.newRequestQueue(this);
 
-        String url = "https (poner la url del laravel ahora despues)";
+        String url = "http://127.0.0.1:8000/a%C3%B1adir-monumento";
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(
                 Request.Method.GET,
                 url,
